@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class SortingTester<T extends Comparable<T>> {
-    private static final int ARRAY_SIZE = 10000;
+    private static final int ARRAY_SIZE = 1000;
     private static final int TEST_SIZE = 1000;
 
     public void testSorting(ArrayGenerator<T> generator, QuickSort<T> quickSort) {
@@ -33,9 +33,9 @@ public class SortingTester<T extends Comparable<T>> {
 
         long sum = durations.stream()
                 .mapToLong(Duration::toMillis)
-                        .sum();
+                .sum();
 
-        System.out.printf("\t\tTiempo promedio: %s ms\n", average);
-        System.out.printf("\t\tSumatoria: %s ms\n", sum);
+        System.out.printf("\t\tTiempo promedio: %.2f ms\n", average);
+        System.out.printf("\t\tSumatoria: %d ms\n", sum);
     }
 }
