@@ -51,7 +51,6 @@ public class SortingAlgorithms {
         return i;
     }
 
-    // Partición con pivote en el último elemento (high)
     private static <T extends Comparable<T>> int highPivotPartition(T[] array, int left, int right) {
         T pivot = array[right];
         int i = left - 1;
@@ -80,6 +79,6 @@ public class SortingAlgorithms {
         array[randomIndex] = array[right];
         array[right] = temp;
 
-        return highPivotPartition(array, left, right);  // Usamos la partición con el pivote en el último elemento
+        return highPivotPartition(array, left, right);
     }
 }
